@@ -1,0 +1,96 @@
+<div class="navbar">
+      <h1 class="logo">Bigboy Shoes
+        <span class="material-symbols-outlined menu-icon" onclick="toggleClass()"> menu </span>
+
+      </h1>
+     
+
+      <nav id="list">
+        <ul class="links">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="./html/contacts.html">Contact Us</a></li>
+          <li><a href="./html/contacts.html">Login</a></li>
+          <li><a href="./html/contacts.html">Sign Up</a></li>
+        </ul>
+      </nav>
+</div>
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin-left: 8px;
+}
+
+nav {
+  /* width: 100%; */
+  background-color: white;
+}
+nav ul {
+  /* width: 100%; */
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  height: 50px;
+}
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-icon{
+  margin: 8px;
+  float: right;
+  display: none !important
+}
+
+@media screen and (max-width: 900px) {
+  nav{
+    width: 100%;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+  .logo{
+    width: 95%;
+    margin: 8px;
+  }
+  .menu-icon{
+    display: inline-block !important
+  }
+}
+
+Hide and Show LISTS in mobile
+
+<script>
+    function toggleClass() {
+      const list = document.getElementById("list");
+      if(list.style.display == "none"){
+        list.style.display = "block"
+      }else{
+        list.style.display = "none"
+      }
+    }
+  </script>
+	
+	
+	
